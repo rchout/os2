@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pageview
+  labels:
+    app: pageview
+spec:
+  containers:
+  - name: pageview
+    image: docker.io/unix72/rscontainer

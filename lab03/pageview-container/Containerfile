@@ -1,0 +1,3 @@
+FROM alpine:3.10
+COPY myserver /usr/local/bin
+CMD ["/usr/local/bin/myserver"]

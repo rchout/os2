@@ -1,0 +1,9 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: netshoot
+spec:
+  containers:
+  - name: netshoot
+    image: docker.io/nicolaka/netshoot
+    tty: true

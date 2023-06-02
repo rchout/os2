@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pageview
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: pageview
+
+  template:
+    metadata:
+      labels:
+        app: pageview
+
+    spec:
+
+      containers:
+      - name: pageview
+        image: docker.io/unix72/pageview:1.0 

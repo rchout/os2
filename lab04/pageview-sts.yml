@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: pageview
+spec:
+  replicas: 7
+  revisionHistoryLimit: 20
+  selector:
+    matchLabels:
+      app: pageview
+  template:
+    metadata:
+      labels:
+        app: pageview
+    spec:
+      containers:
+      - name: pageview
+        image: docker.io/unix72/pageview:v1.0
